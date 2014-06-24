@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Route</th>
+    <th>Number of Stops</th>
+  </tr>
+  <% @routes.each do |route, num_of_stops| %>
+    <tr>
+      <td><%= link_to route, route_path(route.to_i) %></td>
+      <td><%= num_of_stops %></td>
+    </tr>
+  <% end %>
+</table>
