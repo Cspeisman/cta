@@ -1,5 +1,18 @@
-<div class='chart'>  
-  <%# @routes.each do |route, num_of_stops| %>
-      <!-- <div style='width:<%#= "#{num_of_stops * 2}px "%>'><%#= route %></div> -->
-  <%# end %>
+<div class='chart'> 
+  <span>Route #</span> 
+  <% @routes.each do |route, num_of_stops| %>
+    <% unless route == nil %>
+      <div class='cell'>
+        <div class='route-num'>
+          <%= link_to route, route_path(route.to_i) %>
+        </div>
+        <div class='bar' style='width:<%= "#{num_of_stops * 2}px "%>'>
+          <%= num_of_stops %>
+        </div>
+        <div class='stop-info hide' >
+          <span>Stops: <%= num_of_stops %></span><span>Route: <%= route %></span>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
 </div>
