@@ -9,6 +9,7 @@ body{
   background: #fff;
   padding: 50px;
   border-radius: 3px;
+  box-shadow: 1px 1px 19px #A09D9D;
 }
 
 .bar {
@@ -28,6 +29,7 @@ body{
 }
 .cell {
   width: 100%;
+  margin-bottom: 10px;
   &:after {
     content: " ";
     display: table;
@@ -69,4 +71,31 @@ span {
     color: white;
     text-decoration: none;
   }
+  &:hover{
+    background: #E28E09;
+  }
+}
+
+td {
+  
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+  box-shadow: 1px 1px 3px #F3F3F3;
+}
+
+tr:hover{
+  background: #eef;
+}
+thead{ 
+  tr:hover{
+    background: none;
+  }
+
+  td{
+    border-right: none;
+    border-bottom: solid #eee;
+    box-shadow: none;
+  }
+
 }

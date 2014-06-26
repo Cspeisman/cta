@@ -1,8 +1,32 @@
-<% @stops.each do |stop|  %>
-  <div>
-    <%= stop.id  %>
-    <%= stop.cross_street  %>
-    <%= stop.on_street  %>
-    <%= stop.routes  %>
-  </div>
-<% end %>
+<div class='chart'>
+  <%= link_to 'Back', root_path %> 
+  <table>
+    <thead>
+      <tr>
+        <td colspan="4"><h3><%="Route #{ params[:route_id]}" %></h4></td>
+      </tr>
+      <tr>
+        <td>Stop Id</td>
+        <td>On Street</td>
+        <td>Cross Street</td>
+        <td># Of Routes Sharing This Stop</td>
+      </tr>
+    </thead>
+    <tbody>
+  <% @stops.each do |stop|  %>
+    <tr>
+      <td><%= stop.id %></td>
+      <td><%= stop.cross_street %></td>
+      <td><%= stop.on_street %></td>
+      <td>
+        <% @locations.each do |location|  %>
+          <% if location.location == stop.location %>
+            <%= location.stop_count %>
+          <% end %>
+        <% end %>
+      </td>
+  <% end %>
+    </tr>
+</tbody>
+  </table>
+</div>

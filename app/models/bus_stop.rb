@@ -7,7 +7,7 @@ class BusStop < ActiveRecord::Base
 
   def self.popular_stops
     # find_by_sql("select *, count(*) as C from bus_stops group by location having count(*) > 1 order by C desc limit 20")
-    select("*, count(*) as C").group('location having count(*) > 1').order('C desc')
+    select("*, count(*) as stop_count").group('location having count(*) > 1').order('stop_count desc')
   end
 end
 

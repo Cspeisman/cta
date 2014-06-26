@@ -1,8 +1,8 @@
-<div class='chart'> 
+<div class='chart'>
   <span>Route #</span> 
   <span class='header'>Number of stops</span>
   <% @routes.each do |route, num_of_stops| %>
-    <% unless route == nil %>
+    <% unless route.blank? %>
       <div class='cell'>
         <div class='route-num'>
           <%= link_to route, "/routes/#{route}" %>
@@ -13,13 +13,9 @@
           </div>
           <div class='stop-info hide' >
             <span>Route: <%= route %></span><span>Stops: <%= num_of_stops %></span>
-            <%# if @locations.any? {|stop| stop.route == route } %>
-              <%#= @locations.find {|stop| stop.route == route}. %>
-            <%# end %>
           </div>
         </div>
       </div>
     <% end %>
   <% end %>
-  <%= @locations.inspect %>
 </div>
