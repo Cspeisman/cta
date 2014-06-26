@@ -4,7 +4,7 @@ CtaRidership::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'bus_stops#index'
-  get 'routes/:id' => 'bus_routes#show', as: :route
+  get 'routes/:route_id' => 'bus_routes#show', as: :route
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

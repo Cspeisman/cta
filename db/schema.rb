@@ -11,20 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140616022335) do
+ActiveRecord::Schema.define(version: 20140626164844) do
 
   create_table "bus_stops", force: true do |t|
     t.integer  "stop_id"
+    t.string   "on_street"
     t.string   "cross_street"
-    t.integer  "routes"
+    t.string   "routes"
     t.float    "boardings"
     t.float    "alightings"
     t.datetime "month_beginning"
     t.string   "daytype"
     t.string   "location"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "on_street"
   end
+
+  add_index "bus_stops", ["location"], name: "index_bus_stops_on_location"
 
 end

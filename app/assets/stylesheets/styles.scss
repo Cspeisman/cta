@@ -1,5 +1,16 @@
 * { box-sizing: border-box } 
 
+body{
+  background-color: rgba(0,0,0,.1);
+}
+.chart {
+  max-width: 900px;
+  margin: 45px auto;
+  background: #fff;
+  padding: 50px;
+  border-radius: 3px;
+}
+
 .bar {
   font: 10px sans-serif;
   background-color: #3274AC;
@@ -27,12 +38,17 @@ span {
   color: #928e86;
   padding-bottom: 5px;
   display: inline-block;
+  
+}
+.header {
+  margin-left: 30px;
+  margin-bottom: 20px;
 }
 
 .stop-info {
   padding: 10px 0;
   clear: both;
-  margin-left: 60px;
+  margin-left: 65px;
   span {
     padding: 0 10px;
 
@@ -43,7 +59,7 @@ span {
 }
 .route-num {
   float: left;
-  width: 3%;
+  width: 5%;
   margin: 0 30px 0 5px;
   background: #FF9C00;
   border-radius: 4px;
