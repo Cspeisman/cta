@@ -6,11 +6,13 @@
         <div class='route-num'>
           <%= link_to route, route_path(route.to_i) %>
         </div>
-        <div class='bar' style='width:<%= "#{num_of_stops * 2}px "%>'>
-          <%= num_of_stops %>
-        </div>
-        <div class='stop-info hide' >
-          <span>Stops: <%= num_of_stops %></span><span>Route: <%= route %></span>
+        <div class='bar-wrapper'>
+          <div class='bar' style='width:<%= "#{num_of_stops * 2}px "%>'>
+            <%= num_of_stops %>
+          </div>
+          <div class='stop-info hide' >
+            <span>Route: <%= route %></span><span>Stops: <%= num_of_stops %></span>
+          </div>
         </div>
       </div>
     <% end %>

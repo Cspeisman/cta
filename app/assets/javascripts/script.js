@@ -10,7 +10,7 @@
   }
 
   $('.stop-info').hide();
-  $('.cell').on('click', routeData);
+  $('.bar-wrapper').on('click', routeData);
 
 })();
 
